@@ -1,4 +1,4 @@
-.header_component {
+.header-component { /* Changed underscore to hyphen */
     display: flex;
     margin-bottom: 10px;
     box-shadow: 0px 9px 13px rgb(0 0 0 / 5%);
@@ -6,12 +6,12 @@
     padding: 0 20px;
 }
 
-.header_component img {
+.header-component img { /* Changed underscore to hyphen */
     height: 50px;
     width: 50px;
 }
 
-.header_component h1 {
+.header-component h1 { /* Changed underscore to hyphen */
     font-size: 36px;
     font-weight: 700;
     color: #674836;
