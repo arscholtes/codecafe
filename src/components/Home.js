@@ -18,6 +18,8 @@ function Home({ items }) {
   );
 }
 
-items: PropTypes.arrayOf(ItemType).isRequired,
+Home.PropTypes = {
+  items: PropTypes.arrayOf(ItemType).isRequired,
+};
 
 export default Home;
