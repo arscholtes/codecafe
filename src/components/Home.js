@@ -18,7 +18,7 @@ function Home({ items }) {
   );
 }
 
-Home.PropTypes = {
+Home.propTypes = {
   items: PropTypes.arrayOf(ItemType).isRequired,
 };
 
