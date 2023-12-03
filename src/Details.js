@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Thumbnail from './components/Thumbnail.css';
-// import ItemType from '../types/items';
+import ItemType from './components/item';
 import './Details.css';
 import { itemImages } from './items';
 
