@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
+import NotFound from './NotFound';
 import Header from './components/Header';
 import Home from './components/Home';
 
@@ -19,7 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home items={items} />} />
-        <Route path="*" element={<div>Page not found</div>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

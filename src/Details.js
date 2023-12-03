@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import Thumbnail from './Thumbnail';
-import { itemImages } from '../items';
-import './Home.css';
-import ItemType from './item';
+import Thumbnail from './components/Thumbnail.css';
+// import ItemType from '../types/items';
+import './Details.css';
+import { itemImages } from './items';
 
-function Home({ items }) {
+function Details({ items }) {
   return (
     <div className="home-component">
       {items.map((item) => (
@@ -18,8 +18,8 @@ function Home({ items }) {
   );
 }
 
-Home.propTypes = {
+Details.propTypes = {
   items: PropTypes.arrayOf(ItemType).isRequired,
 };
 
-export default Home;
+export default Details;
