@@ -6,14 +6,19 @@ import { itemImages } from './items';
 
 function Details({ items }) {
   return (
-    <div className="home-component">
-      {items.map((item) => (
-        <Thumbnail
-          key={item.itemId}
-          image={itemImages[item.imageId]}
-          title={item.title}
-        />
-      ))}
+    <div className="details-component">
+      <div>
+        {/* display item */}
+      </div>
+      <div className="details-component-sidebar">
+        {items.map((item) => (
+          <Thumbnail
+            key={item.itemId}
+            image={itemImages[item.imageId]}
+            title={item.title}
+          />
+        ))}
+      </div>
     </div>
   );
 }
