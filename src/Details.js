@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
 import Thumbnail from './components/Thumbnail.css';
 import ItemType from './components/item';
 import './Details.css';
@@ -8,7 +9,7 @@ function Details({ items }) {
   return (
     <div className="details-component">
       <div>
-        {/* display item */}
+        <Outlet />
       </div>
       <div className="details-component-sidebar">
         {items.map((item) => (
