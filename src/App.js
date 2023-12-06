@@ -22,7 +22,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/details" element={<Details items={items} />}>
-          <Route path=":id" element={<DetailItem />} />
+          <Route path=":id" element={<DetailItem items={items} />} />
           <Route index element={<div>No Item Selected</div>} />
         </Route>
         <Route path="/" element={<Home items={items} />} />
