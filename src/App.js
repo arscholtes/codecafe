@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
-import NotFound from './NotFound';
-import Details from './Details';
+import NotFound from './components/NotFound';
+import Details from './components/Details';
 import Header from './components/Header';
 import Home from './components/Home';
 
