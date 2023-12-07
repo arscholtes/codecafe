@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { itemImages } from '../types/item';
-import ItemType from '../types/item';
 import './DetailItem.css';
+import { items, itemImages } from '../items';
 
 function DetailItem() {
   const { id } = useParams();

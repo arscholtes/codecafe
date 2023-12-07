@@ -17,6 +17,9 @@ function App() {
       .then((result) => setItems(result.data))
       .catch(console.error);
   }, []);
+  if (items.length === 0) {
+    return <div>Loading...</div>;
+  }
   return (
     <Router>
       <Header />
