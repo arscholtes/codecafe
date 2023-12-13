@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './DetailItem.css';
-import { items, itemImages } from '../items';
+import { itemImages } from '../items';
+import ItemType from './item';
 
-function DetailItem() {
+function DetailItem({ items }) {
   const { id } = useParams();
   const detailItem = items.find((item) => item.itemId === id);
   return (
