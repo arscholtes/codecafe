@@ -9,16 +9,20 @@ function DetailItem({ items }) {
   const detailItem = items.find((item) => item.itemId === id);
   return (
     <div className="detail-item-component">
-      <img
-        className="details-image"
-        src={itemImages[detailItem.imageId]}
-        alt={detailItem.title}
-      />
-      <h2>{detailItem.price.toFixed(2)}</h2>
-      <div>
-        $
-        {detailItem.price.toFixed(2)}
-      </div>
+      {detailItem ? (
+        <>
+          <img
+            className="details-image"
+            src={itemImages[detailItem.imageId]}
+            alt={detailItem.title}
+          />
+          <h2>{detailItem.price.toFixed(2)}</h2>
+          <div>
+            $
+            {detailItem.price.toFixed(2)}
+          </div>
+        </>
+      ) : <h2>Unknown Item</h2>}
     </div>
   );
 }
