@@ -16,7 +16,8 @@ function DetailItem({ items }) {
             src={itemImages[detailItem.imageId]}
             alt={detailItem.title}
           />
-          <h2>{detailItem.price.toFixed(2)}</h2>
+          <h2>{detailItem.title}</h2>
+          {detailItem.description && <h6>{detailItem.description}</h6>}
           <div>
             $
             {detailItem.price.toFixed(2)}
