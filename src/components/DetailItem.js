@@ -20,7 +20,7 @@ function DetailItem({ items }) {
           {detailItem.description && <h6>{detailItem.description}</h6>}
           <div>
             $
-            {(detailItem.salePrice || detailItem.price).toFixed(2)}
+            {(detailItem.salePrice ?? detailItem.price).toFixed(2)}
           </div>
         </>
       ) : <h2>Unknown Item</h2>}
