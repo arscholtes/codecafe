@@ -5,8 +5,9 @@ services:
     build: ${CODE_CAFE_BACKEND:-../code_cafe_backend}
     # The frontend shares this network namespace, so the proxy in package.json
     # (http://localhost:3030) reaches the API without changing the app.
+    # Loopback only: a dev server is not something to offer the LAN or the tailnet.
     ports:
-      - "${CODECAFE_PORT:-3020}:3000"
+      - "127.0.0.1:${CODECAFE_PORT:-3020}:3000"
 
   frontend:
     build:
