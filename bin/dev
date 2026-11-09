@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# bin/dev   start the app and its API in Docker on http://localhost:${CODECAFE_PORT:-3020}
+set -euo pipefail
+cd "$(dirname "$0")/.."
+exec docker compose up --build "$@"
