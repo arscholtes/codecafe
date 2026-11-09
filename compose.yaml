@@ -1,0 +1,30 @@
+# One command from this repo: bin/dev, then http://localhost:${CODECAFE_PORT:-3020}.
+# The API lives in its own repo, built from the checkout beside this one.
+services:
+  backend:
+    build: ${CODE_CAFE_BACKEND:-../code_cafe_backend}
+    # The frontend shares this network namespace, so the proxy in package.json
+    # (http://localhost:3030) reaches the API without changing the app.
+    ports:
+      - "${CODECAFE_PORT:-3020}:3000"
+
+  frontend:
+    build:
+      context: .
+      target: dev
+    network_mode: service:backend
+    depends_on:
+      - backend
+    environment:
+      BROWSER: none
+      # Bind-mounted files do not raise change events inside the VM; poll instead.
+      WATCHPACK_POLLING: "true"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+
+volumes:
+  node_modules:

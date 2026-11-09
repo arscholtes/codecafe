@@ -1,5 +1,15 @@
 # Getting Started with Create React App
 Code Café
+
+## Run it
+
+Needs Docker and the API checked out beside this repo as `../code_cafe_backend`
+(or set `CODE_CAFE_BACKEND` in `.env`; `.env.example` lists every setting).
+
+```bash
+bin/dev        # http://localhost:3020, with the API running beside it
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
